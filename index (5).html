@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart ChatBot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Settings Button -->
+<button class="settings-btn" onclick="openSettings()">⚙️</button>
+
+<!-- Settings Modal -->
+<div class="modal" id="settingsModal">
+    <div class="modal-content">
+        <h3>API Settings</h3>
+
+        <label>API Key:</label>
+        <input type="password" id="apiKeyInput" placeholder="Enter API Key">
+
+        <div class="toggle-area">
+            <label>Enable API</label>
+            <input type="checkbox" id="apiToggle">
+        </div>
+
+        <button onclick="saveAPI()">Save</button>
+        <button onclick="closeSettings()">Close</button>
+    </div>
+</div>
+
+<div class="chat-container">
+    <div class="header">
+        <h2>🤖 Smart ChatBot</h2>
+    </div>
+
+    <div class="chat-box" id="chatBox"></div>
+
+    <div class="input-area">
+        <input type="text" id="userInput" placeholder="Write Here...">
+        
+        <input type="file" id="imageInput" accept="image/*" style="display:none;">
+        <button onclick="selectImage()">🔗</button>
+
+        <button id="sendBtn">Send</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
